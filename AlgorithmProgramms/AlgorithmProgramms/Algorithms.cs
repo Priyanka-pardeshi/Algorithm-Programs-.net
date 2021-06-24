@@ -101,33 +101,7 @@ namespace AlgorithmProgramms
            
         }
 
-        //public void mergeSort(int[] mergeList,int left,int right)
-        //{
-        //    if (left < right)
-        //    {
-        //        int middle = (left + right) / 2;
-        //        mergeSort(mergeList, left, middle);
-        //        mergeSort(mergeList, middle + 1, right);
-        //        merge(mergeList, left, middle, right);
 
-        //    }
-        //}
-        //public void merge(int[] MergeList, int left, int middle, int right)
-        //{
-        //    int[] leftArray = new int[middle - left + 1];
-        //    int[] rightArray = new int[right - middle];
-
-        //    Array.Copy(MergeList,left,leftArray,0,middle-left+1);//source, destination,length
-        //    Array.Copy(MergeList,middle+1,rightArray,0,right-middle);
-
-        //    int i = 0, j = 0;
-
-        //    int temp = left;
-        //    while(i<leftArray && j<rightArray)
-        //    {
-                
-        //    }
-        //}
 
         public void PrintArray(int[] arr)
         {
@@ -141,10 +115,7 @@ namespace AlgorithmProgramms
 
 
 
-        public void primeNumber()
-        {
-            
-        }
+      
         
     }
 }
