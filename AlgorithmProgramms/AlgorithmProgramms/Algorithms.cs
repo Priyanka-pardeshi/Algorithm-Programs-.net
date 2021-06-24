@@ -34,19 +34,19 @@ namespace AlgorithmProgramms
         /// <param name="selectionList"></param>
         public void selectionSort(int[] selectionList)
         {
-            int i, j, min,temp;  //initiall minin index will be zero
+            int i, j, min, temp;  //initiall minin index will be zero
 
             for (i = 0; i < selectionList.Length; i++)
             {
                 //At first min value will be first value
-                min = i;                   
-                for (j = 0; j < selectionList.Length; j++)     
+                min = i;
+                for (j = 0; j < selectionList.Length; j++)
                 {
-                    if (selectionList[j]>selectionList[min])
+                    if (selectionList[j] > selectionList[min])
                     {
                         min = j;
                         //swapped values if we found new min number
-                        temp = selectionList[i]; 
+                        temp = selectionList[i];
                         selectionList[i] = selectionList[min];
                         selectionList[min] = temp;
                     }
@@ -63,17 +63,17 @@ namespace AlgorithmProgramms
         /// <param name="quickList"></param>
         /// <param name="start"></param>
         /// <param name="end"></param>
-        public int[] quickSort(int[] quickList,int start,int end)
+        public int[] quickSort(int[] quickList, int start, int end)
         {
             int i;
             if (start < end)
             {
                 i = Partition(quickList, start, end);
 
-                quickSort(quickList,start,i-1);
+                quickSort(quickList, start, i - 1);
                 quickSort(quickList, i + 1, end);
             }
-           
+
             return quickList;
         }
         public int Partition(int[] quickList, int start, int end)
@@ -83,7 +83,7 @@ namespace AlgorithmProgramms
 
             int i = start - 1;
 
-            for (int j = start; j <= end-1; j++)
+            for (int j = start; j <= end - 1; j++)
             {
                 if (quickList[j] <= pivot)
                 {
@@ -97,8 +97,8 @@ namespace AlgorithmProgramms
             quickList[i + 1] = quickList[end];
             quickList[end] = temp;
 
-            return i+1;
-           
+            return i + 1;
+
         }
 
 
@@ -113,9 +113,29 @@ namespace AlgorithmProgramms
             Console.WriteLine();
         }
 
+        public void PrimeNumber()
+        {
+            bool isPrime=false;
+            for (int i = 2; i < 1000; i++)
+            {
+                for (int j = 2; j <= 100; j++)
+                {
 
+                    if (i != j && i % j == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
 
-      
-        
+                    if (isPrime == true)
+                    {
+                        Console.Write("\t" + i);
+                    }
+                    isPrime = true;
+                }
+            }
+
+        }
     }
+       
 }

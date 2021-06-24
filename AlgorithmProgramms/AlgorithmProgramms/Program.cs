@@ -19,6 +19,9 @@ namespace AlgorithmProgramms
            
             Console.WriteLine("soreted using Quick sort");
             algorithms.PrintArray(temp);
+
+            //Prime Number
+            algorithms.PrimeNumber();
             Console.ReadKey();
         }
     }
